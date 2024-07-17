@@ -4,19 +4,24 @@ metadata:
   name: email-templates
 data:
   inactive_warning.tmpl: |
-    Subject: You are about to be inactive
+    Subject: Indianapolis ARTCC Currency Warning
     BCC:
-    - seniorstaff@zkcartcc.org
+    - datm@zidartcc.org
     Body: |
       Dear {{.FirstName}} {{.LastName}},
 
-      <p>This is a warning that you have not yet controlled the minimum number of hours during the activity as
-      required by the Kansas City ARTCC Facility Administrative Policy (7210.1).  Per the policy, controllers must control 
-      no less than 2 hours per 2 month period.</p>
+      <p>You are receiving this email because our records indicate that you have not met the currency requirements to remain a controller with Indy Center. Per Indy Center Administrative Policy, home controllers must control three (3) hours within a quarter at ZID, visitor controllers must control one (1) hour within a quarter with exceptions for new controllers or those who have requested training.</p>
 
-      <p>If, on the first of the month, this requirement is not met, you will be marked inactive and are subject to
-      removal from the roster. If you are unable to meet this requirement, please contact the Senior Staff to request
-      a leave of absense. They may be contacted by emailing seniorstaff@zkcartcc.org.</p>
+      <p>This email may be in error if;</p>
+      <p>- You have joined ZID on or after the first day of the quarter</p>
+      <p>- You have requested training at ZID</p>
+      <p>- You have completed a training session at ZID on or after the first day of the quarter</p>
+      <p>- You are on an LOA (leave of absence)</p>
+
+      <p>If you believe you should not be removed for inactivity, please reply to datm@zidartcc.org immediately.</p>
+
+      <Otherwise, you may re-obtain currency by completing a cumulative 3 hours of controlling for the quarter no later than the last day of the quarter (for example, if you've already controlled for 2 hours this quarter, you only need to control one more hour to remain on the roster). After this date, all controllers not in compliance with these currency requirements will be removed from the Indy Center roster. If you have any questions or concerns, or need to discuss an LOA, please reply directly to this email.</p>
+
 
       <p>Thanks,<br>
       {{- range $atm := findRole "atm"  -}}
@@ -25,21 +30,18 @@ data:
       {{- range $datm := findRole "datm"  -}}
       {{ $datm }}<br>
       {{- end -}}
-      Kansas City ARTCC, VATUSA<br>
-      https://zkcartcc.org</p>
+      Indianapolis ARTCC, VATUSA<br>
+      https://zidartcc.org</p>
   inactive.tmpl: |
-    Subject: You are inactive
+    Subject: Indianapolis ARTCC Roster Removal
     BCC:
-    - seniorstaff@zkcartcc.org
+    - datm@zidartcc.org, atm@zidartcc.org
     Body: |
       Dear {{.FirstName}} {{.LastName}},
 
-      <p>This is an email notification to inform you that you have not met the minimum activity requirements as set forth
-      by the Kansas City ARTCC Facility Administrative Policy (7210.1).  Per the policy, controllers must control no less than 2
-      hours per 2 month period. You have been marked inactive on the roster and are subject to removal for Inactivity.</p>
+      <p>TYou have been removed from the Indy Center roster as a controller due to inactivity. The Indy Center Administrative Policy requires home controllers to control 3 hours per quarter and visitors to control 1 hour per quarter, have an active training request, or have joined Indy Center during the active quarter. If you believe that you did maintain currency and were incorrectly removed from the roster, please contact datm@zidartcc.org.</p>
 
-      <p>If you require a Leave of Absense, please contact the Senior Staff as soon as possible. They may be contacted by
-      emailing seniorstaff@zkcartcc.org.</p>
+      <p>If you decide you’d like to control at Indy Center in the future, we’d love to have you! Please submit a request on the IndyCenter website or contact datm@zidartcc.org. Thank you for your interest in Indy Center.</p>
 
       <p>Thanks,<br>
       {{- range $atm := findRole "atm" -}}
@@ -48,21 +50,18 @@ data:
       {{- range $datm := findRole "datm"  -}}
       {{ $datm }}<br>
       {{- end -}}
-      Kansas City ARTCC, VATUSA<br>
-      https://zkcartcc.org</p>
+      Indianapolis ARTCC, VATUSA<br>
+      https://zidartcc.org</p>
   visiting_rejected.tmpl: |
     Subject: Your visiting controller request has been rejected
     BCC:
-    - seniorstaff@zkcartcc.org
+    - datm@zidartcc.org, atm@zidartcc.org
     Body: |
       Dear {{.FirstName}} {{.LastName}},
 
-      <p>This email is to notify you that your request to join the Kansas City ARTCC Visiting Controller Roster has been
-      rejected. If you feel this was done in error, please reach out to the Kansas City ARTCC Senior Staff by emailing
-      seniorstaff@zkcartcc.org.</p>
+      <p>This email is to notify you that your request to join the Indianapolis ARTCC Visiting Controller Roster has been rejected. If you feel this was done in error, please reach out to the Indy Center DATM by emailing datm@zidartcc.org.</p>
 
-      <p>The general reason applications are rejected are due to you not meeting the minimum requirements as listed on the
-      website.</p>
+      <p>The general reason applications are rejected are due to you not meeting the minimum requirements as listed on the website or VATUSA Visiting and Transferring Policy.</p>
 
       <p>Regards,<br>
       {{- range $atm := findRole "atm"  -}}
@@ -71,25 +70,24 @@ data:
       {{- range $datm := findRole "datm"  -}}
       {{ $datm }}<br>
       {{- end -}}
-      Kansas City ARTCC, VATUSA<br>
-      https://zkcartcc.org</p>
+      Indianapolis ARTCC, VATUSA<br>
+      https://zidartcc.org</p>
   visiting_added.tmpl: |
-    Subject: You have been added to the visiting controller roster
+    Subject: Welcome to Indy Center!
     BCC:
-    - seniorstaff@zkcartcc.org
+    - datm@zidartcc.org, atm@zidartcc.org
     Body: |
       Dear {{.FirstName}} {{.LastName}},
 
-      <p>This email is to notify you that you have been added to the Kansas City ARTCC Visiting Controller Roster.</p>
+      <p>The staff and membership of the virtual Indianapolis ARTCC would like to extend a warm welcome. This email contains the vital information necessary to begin your controlling career with Indy. Please read it thoroughly and be sure to contact a senior staff member with any questions!</p>
 
-      <p>We are thrilled to welcome you to Kansas City ARTCC on VATSIM.</p>
+      <p>Discord is our primary method of communication, from training to daily questions to announcements. To join and link your account with our discord, head to https://discord.zidartcc.org/.</p>
 
-      <p>To get started, please visit our website at https://zkcartcc.org and log in using your VATSIM account. Our primary 
-      communication platform is Discord, so if you don't already have it, please download it from this link. After downloading, 
-      join our Discord server here: https://vats.im/zkcdiscord, and then link your Discord account to your ZKC 
-      account by visiting https://discord.zkcartcc.org.</p>
+      <p> The Indy website contains most of the information you will need regarding your roster status, training history, events, and much more! You will be able to log into the website once you become a member of ZID. Log into the website as soon as you can and be sure to let the staff know if you have any issues. The website can be accessed at http://www.zidartcc.org.</p>
 
-      <p>Next, please review the Kansas City ARTCC Policies by visiting our website at https://zkcartcc.org.</p>
+      <p>The website also contains our administrative policies, which include the checkout process and visiting controller currency requirements. Please take a moment to review these to become familiar with how Indy Center operates.</p>
+
+      <p>Once again, we would like to extend a warm welcome to you! Be sure to contact a staff member with any questions you may have! We're happy to have you as a visiting controller.</p>
 
       <p>We look forward to controlling with you and hope to see you soon!<br>
       {{- range $atm := findRole "atm"  -}}
@@ -98,17 +96,16 @@ data:
       {{- range $datm := findRole "datm"  -}}
       {{ $datm }}<br>
       {{- end -}}
-      Kansas City ARTCC, VATUSA<br>
-      https://zkcartcc.org</p>
+      Indianapolis ARTCC, VATUSA<br>
+      https://zidartcc.org</p>
   visiting_removed.tmpl: |
     Subject: You have been removed from the visiting controller roster
     BCC:
-    - seniorstaff@zkcartcc.org
+    - datm@zidartcc.org, atm@zidartcc.org
     Body: |
       Dear {{.FirstName}} {{.LastName}}
 
-      <p>This is notification that you have been removed from the Kansas City ARTCC Visiting Controller Roster. If you feel this
-      was done in error, please reach out to the Kansas City ARTCC Senior Staff by emailing seniorstaff@zkcartcc.org.</p>
+      <p>This is notification that you have been removed from the Indianapolis ARTCC Visiting Controller Roster. If you feel thiswas done in error, please reach out to the Indy Center DATM by emailing datm@zidartcc.org.</p>
 
       <p>Regards,<br>
       {{- range $atm := findRole "atm"  -}}
@@ -117,5 +114,5 @@ data:
       {{- range $datm := findRole "datm"  -}}
       {{ $datm }}<br>
       {{- end -}}
-      Kansas City ARTCC, VATUSA<br>
-      https://zkcartcc.org</p>
+      Didver ARTCC, VATUSA<br>
+      https://zidartcc.org</p>
