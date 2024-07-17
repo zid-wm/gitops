@@ -1,0 +1,11 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: www-zidartcc-org-tls
+spec:
+  dnsNames:
+  - new.zidartcc.org
+  issuerRef:
+    kind: ClusterIssuer
+    name: letsencrypt
+  secretName: www-zidartcc-org-tls
