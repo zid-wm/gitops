@@ -109,7 +109,7 @@ items:
         client_secret: "{{.OAUTH_CLIENT_SECRET | default "zidartcc"}}"
         my_base_URL: "{{.OAUTH_MY_BASE_URL | default "https://api.dev.zidartcc.net" }}"
       vatusa:
-        facility: "ZDV"
+        facility: "ZID"
         api_key: "{{.VATUSA_API_KEY | default "zid"}}"
         test_mode: {{.VATUSA_TEST_MODE | default false }}
       metrics:
