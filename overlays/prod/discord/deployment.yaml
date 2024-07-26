@@ -23,7 +23,7 @@ spec:
         app: discord
     spec:
       containers:
-      - image: adhp/discord:zdv
+      - image: adhp/discord:zid
         imagePullPolicy: Always
         livenessProbe:
           failureThreshold: 3
