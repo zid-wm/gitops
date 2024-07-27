@@ -35,7 +35,7 @@ items:
         from: {{.EMAIL_FROM | default "root@localhost"}}
         template_dir: "/app/templates"
       features:
-        controller_online: false
+        controller_online: true
         staffing_request: true
       facility:
         activity:
