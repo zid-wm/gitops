@@ -4,7 +4,7 @@ metadata:
   name: www-zidartcc-org-tls
 spec:
   dnsNames:
-  - new.zidartcc.org
+  - zidartcc.org
   issuerRef:
     kind: ClusterIssuer
     name: letsencrypt
