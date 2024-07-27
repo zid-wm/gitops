@@ -5,7 +5,7 @@ resources:
 images:
 - name: adhp/zid-frontend
   newName: adhp/frontend
-  newTag: zid-main-b10264d
+  newTag: zid-main-3ff4d91
 - name: adhp/zkc-frontend
   newName: adhp/frontend
   newTag: zdv-main-aacda50
