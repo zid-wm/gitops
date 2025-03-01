@@ -15,7 +15,18 @@ spec:
               number: 80
         path: /
         pathType: Prefix
+  - host: discord.flyindycenter.com
+    http:
+      paths:
+        - backend:
+            service:
+              name: discord
+              port:
+                number: 80
+          path: /
+          pathType: Prefix
   tls:
   - hosts:
     - discord.zidartcc.org
+    - discord.flyindycenter.com
     secretName: tls-discord-zidartcc-org

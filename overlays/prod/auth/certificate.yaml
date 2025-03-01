@@ -5,6 +5,7 @@ metadata:
 spec:
   dnsNames:
   - auth.zidartcc.org
+  - auth.flyindycenter.com
   issuerRef:
     kind: ClusterIssuer
     name: letsencrypt

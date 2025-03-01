@@ -89,18 +89,21 @@ items:
           name: "{{.SESSION_NAME | default "zid_session"}}"
           key: "{{.SESSION_KEY | default "zid_session"}}"
           max_age: 604800
-          domain: "{{.SESSION_DOMAIN | default ".zidartcc.org"}}"
+      #    domain: "{{.SESSION_DOMAIN | default ".zidartcc.org"}}"
+          domain: "{{.SESSION_DOMAIN | default ".flyindycenter.com"}}"
           path: "/"
           same_site: "none"
       storage:
-        base_url: {{.STORAGE_BASE_URL | default "https://cdn.zidartcc.org" }}
+      #  base_url: {{.STORAGE_BASE_URL | default "https://cdn.zidartcc.org" }}
+        base_url: {{.STORAGE_BASE_URL | default "https://cdn.flyindycenter.com" }}
         access_key: {{.STORAGE_ACCESS_KEY | default "12345"}}
         secret_key: {{.STORAGE_SECRET_KEY | default "12345"}}
         bucket: {{.STORAGE_BUCKET | default "zidartcc"}}
         region: {{.STORAGE_REGION | default "us-east-1"}}
         endpoint: {{.STORAGE_ENDPOINT | default ""}}
       oauth:
-        base_URL: "https://auth.zidartcc.org"
+      #  base_URL: "https://auth.zidartcc.org"
+        base_URL: "https://auth.flyindycenter.com"
         endpoints:
           token: "/oauth/token"
           user: "/v1/info"
