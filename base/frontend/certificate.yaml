@@ -4,7 +4,6 @@ metadata:
   name: www-zidartcc-org-tls
 spec:
   dnsNames:
-  - zidartcc.org
   - flyindycenter.com
   - www.flyindycenter.com
   issuerRef:

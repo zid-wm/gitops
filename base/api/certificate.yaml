@@ -4,7 +4,6 @@ metadata:
   name: api-zidartcc-org-tls
 spec:
   dnsNames:
-  - api.zidartcc.org
   - api.flyindycenter.com
   issuerRef:
     kind: ClusterIssuer

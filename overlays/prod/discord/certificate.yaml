@@ -4,7 +4,6 @@ metadata:
   name: discord-zidartcc-org-tls
 spec:
   dnsNames:
-  - discord.zidartcc.org
   - discord.flyindycenter.com
   issuerRef:
     kind: ClusterIssuer
