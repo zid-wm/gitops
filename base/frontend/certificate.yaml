@@ -5,6 +5,8 @@ metadata:
 spec:
   dnsNames:
   - zidartcc.org
+  - flyindycenter.com
+  - www.flyindycenter.com
   issuerRef:
     kind: ClusterIssuer
     name: letsencrypt

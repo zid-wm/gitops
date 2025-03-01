@@ -17,7 +17,29 @@ spec:
               number: 80
         path: /
         pathType: Prefix
+  - host: flyindycenter.com
+    http:
+      paths:
+        - backend:
+            service:
+              name: frontend-service
+              port:
+                number: 80
+          path: /
+          pathType: Prefix
+  - host: www.flyindycenter.com
+    http:
+      paths:
+        - backend:
+            service:
+              name: frontend-service
+              port:
+                number: 80
+          path: /
+          pathType: Prefix
   tls:
   - hosts:
     - zidartcc.org
+    - flyindycenter.com
+    - www.flyindycenter.com
     secretName: www-zidartcc-org-tls
