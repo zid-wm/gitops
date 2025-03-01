@@ -5,6 +5,7 @@ metadata:
 spec:
   dnsNames:
   - discord.zidartcc.org
+  - discord.flyindycenter.com
   issuerRef:
     kind: ClusterIssuer
     name: letsencrypt

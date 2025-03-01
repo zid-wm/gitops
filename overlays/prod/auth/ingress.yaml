@@ -15,7 +15,18 @@ spec:
               number: 3000
         path: /
         pathType: Prefix
+  - host: auth.flyindycenter.com
+    http:
+      paths:
+        - backend:
+            service:
+              name: auth
+              port:
+                number: 3000
+          path: /
+          pathType: Prefix
   tls:
   - hosts:
     - auth.zidartcc.org
+    - auth.flyindycenter.com
     secretName: tls-auth-zidartcc-org
