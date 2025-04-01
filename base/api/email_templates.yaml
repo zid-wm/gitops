@@ -6,7 +6,7 @@ data:
   inactive_warning.tmpl: |
     Subject: [ACTION REQUIRED] Indy Center Currency Warning
     BCC:
-    - atm@zidartcc.org, datm@zidartcc.org
+    - atm@flyindycenter.com, datm@flyindycenter.com
     Body: |
       {{.FirstName}},
 
@@ -17,9 +17,9 @@ data:
       <p>- You requested training at Indy Center.</p>
       <p>- You are on an LOA (leave of absence).</p>
 
-      <p>If you believe you should not be removed for inactivity, please email to datm@zidartcc.org immediately.</p>
+      <p>If you believe you should not be removed for inactivity, please email to datm@flyindycenter.com immediately.</p>
 
-      <p>Otherwise, you may re-obtain currency by completing a cumulative 3 hours of controlling for the quarter no later than the last day of the quarter (for example, if you've already controlled for 2 hours this quarter, you only need to control one more hour to remain on the roster). After this date, all controllers not in compliance with these currency requirements will be removed from the Indy Center roster. If you have any questions or concerns, or need to discuss an LOA, please email datm@zidartcc.org</p>
+      <p>Otherwise, you may re-obtain currency by completing a cumulative 3 hours of controlling for the quarter no later than the last day of the quarter (for example, if you've already controlled for 2 hours this quarter, you only need to control one more hour to remain on the roster). After this date, all controllers not in compliance with these currency requirements will be removed from the Indy Center roster. If you have any questions or concerns, or need to discuss an LOA, please email datm@flyindycenter.com</p>
 
 
       <p>Thanks,<br>
@@ -30,11 +30,11 @@ data:
       {{ $datm }}<br>
       {{- end -}}
       Indy Center, VATUSA<br>
-      https://zidartcc.org</p>
+      https://flyindycenter.com</p>
   inactive.tmpl: |
     Subject: Indy Center Roster Removal
     BCC:
-    - datm@zidartcc.org, atm@zidartcc.org
+    - datm@flyindycenter.com, atm@flyindycenter.com
     Body: |
       {{.FirstName}},
 
@@ -50,15 +50,15 @@ data:
       {{ $datm }}<br>
       {{- end -}}
       Indy Center, VATUSA<br>
-      https://zidartcc.org</p>
+      https://flyindycenter.com</p>
   visiting_rejected.tmpl: |
     Subject: Your visiting controller request has been rejected
     BCC:
-    - datm@zidartcc.org, atm@zidartcc.org
+    - datm@flyindycenter.com, atm@flyindycenter.com
     Body: |
       {{.FirstName}},
 
-      <p>This email is to notify you that your request to join the Indy Center controller roster as a visitor has been rejected. If you feel this was done in error, please reach out to the Indy Center DATM by emailing datm@zidartcc.org.</p>
+      <p>This email is to notify you that your request to join the Indy Center controller roster as a visitor has been rejected. If you feel this was done in error, please reach out to the Indy Center DATM by emailing datm@flyindycenter.com.</p>
 
       <p>Visitor applications are usually rejected for not reaching the requirements of the VATUSA visiting controller policy. If your application was denied for another reason, this will be explained in an additional email.</p>
 
@@ -72,21 +72,21 @@ data:
       {{ $datm }}<br>
       {{- end -}}
       Indy Center, VATUSA<br>
-      https://zidartcc.org</p>
+      https://flyindycenter.com</p>
   visiting_added.tmpl: |
     Subject: Welcome to Indy Center!
     BCC:
-    - datm@zidartcc.org, atm@zidartcc.org
+    - datm@flyindycenter.com, atm@flyindycenter.com
     Body: |
       {{.FirstName}},
 
       <p>Welcome to the Indy Center controller roster! Wether you're a new member at Indy Center, or just joining the roster now for a new challenge, we'd like to extend a warm welcome. This email contains the vital information necessary to get started controlling with us, so read it thoroughly and contact a staff member with any questions.</p>
 
-      <p>Discord is our primary method of communication; from training, to daily questions, to announcements. To join our discord, head to https://discord.zidartcc.org/. Note that your Discord account must be linked on the VATUSA website under "My VATUSA" to receive your roles. The TeamSpeak information can be found in the Discord #teamspeak-info channel.</p>
+      <p>Discord is our primary method of communication; from training, to daily questions, to announcements. To join our discord, head to https://discord.indy.center/. Note that your Discord account must be linked on the VATUSA website under "My VATUSA" to receive your roles. The TeamSpeak information can be found in the Discord #teamspeak-info channel.</p>
 
-      <p>Our website https://zidartcc.org contains most of the information you will need regarding your roster status, training history, events, and much more!</p>
+      <p>Our website https://flyindycenter.com contains most of the information you will need regarding your roster status, training history, events, and much more!</p>
 
-      <p>All terminal positions in Indy Center are unrestricted. This means visiting controllers don't need a checkout to start controlling. However, our policies and procedures are <i>strictly</i> enforced to ensure our pilots and controllers have the best experience possible. Please take a moment to review the Administrative Policy, ATC Handbook, and the facility SOP you're looking to control to become familiar with how Indy Center operates. You can quickly access our documents and other resources at https://docs.zidartcc.org. If you are a C1+ you can request training for the ZID Tier 2 endorsement at the link in the #controller-resources channel on our Discord.</p>
+      <p>All terminal positions in Indy Center are unrestricted. This means visiting controllers don't need a checkout to start controlling. However, our policies and procedures are <i>strictly</i> enforced to ensure our pilots and controllers have the best experience possible. Please take a moment to review the Administrative Policy, ATC Handbook, and the facility SOP you're looking to control to become familiar with how Indy Center operates. You can quickly access our documents and other resources at https://docs.indy.center. If you are a C1+ you can request training for the ZID Tier 2 endorsement at the link in the #controller-resources channel on our Discord.</p>
 
       <p>We're happy to have you as a visiting controller.</p>
 
@@ -97,17 +97,17 @@ data:
       {{ $datm }}<br>
       {{- end -}}
       Indy Center, VATUSA<br>
-      https://zidartcc.org</p>
+      https://flyindycenter.com</p>
   visiting_removed.tmpl: |
     Subject: Indy Center Roster Removal
     BCC:
-    - datm@zidartcc.org, atm@zidartcc.org
+    - datm@flyindycenter.com, atm@flyindycenter.com
     Body: |
       {{.FirstName}},
 
       <p>We're sad to see you go!</p>
 
-      <p>You have been removed from the Indy Center controller roster. Removals are usually for inactivity, if you were removed for another reason you will receive a separate email. If you feel this was an error please email the Indy Center DATM at datm@zidartcc.org.</p>
+      <p>You have been removed from the Indy Center controller roster. Removals are usually for inactivity, if you were removed for another reason you will receive a separate email. If you feel this was an error please email the Indy Center DATM at datm@flyindycenter.com.</p>
 
       <p>You retain access to the Indy Center Discord and TeamSpeak regardless of controller roster status and we hope to still see you around! If you would like to re-join the roster at a later date, submit another visiting controller application. Controllers returning to the roster within 6 months retain any endorsements.</p>
 
@@ -119,4 +119,4 @@ data:
       {{ $datm }}<br>
       {{- end -}}
       Indy Center, VATUSA<br>
-      https://zidartcc.org</p>
+      https://flyindycenter.com</p>
