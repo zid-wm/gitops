@@ -18,7 +18,7 @@ images:
   newTag: zdv-v1.9.1711235667.62-8b6ec15
 - name: adhp/zid-frontend
   newName: adhp/frontend
-  newTag: zid-v1.9.1740856900.83-115ffb6
+  newTag: zid-v1.9.1751642977.86-e7756ba
 - name: adhp/zkc-frontend
   newName: adhp/frontend
   newTag: zkc-v1.9.1714390132.64-6f41ec0
